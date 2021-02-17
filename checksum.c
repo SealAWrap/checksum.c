@@ -38,18 +38,24 @@ int main (int argc, char * argv[], char ** envp) {
     printf("%d ", header[i]);
     printf("\n");
   } 
+  Printf("\n");
 
   while (count > 0) {  
     if (count == 5) {
       checksum = header[count];
+      printf("Checksum has passed\n");
     }else{
       sum = sum + header[count];
+      printf("%d\n", sum);
     }
     count = count -1;
   }
   quotient = sum / (max_int + 1);
   remainder = sum % (max_int + 1);
+  printf("Printed quotient %d", quotient);
+  printf("Printed quotient %d", quotient);
   sum = quotient + remainder;
+  printf("sum %d\n", sum);
   complement = max_int - sum;
   
 
