@@ -40,15 +40,14 @@ int main (int argc, char * argv[], char ** envp) {
   } 
   printf("\n");
 
-  while (count > 0) {  
-    if (count == 5) {
-      checksum = header[count];
+  for (int i = 0; i < count; i++) {  
+    if (count == 6) {
+      checksum = header[i];
       printf("Checksum has passed\n");
     }else{
-      sum = sum + header[count];
+      sum = sum + header[i];
       printf("%d\n", sum);
     }
-    count = count -1;
   }
   quotient = sum / (max_int + 1);
   remainder = sum % (max_int + 1);
