@@ -10,7 +10,7 @@
 
 #include "stdio.h"
 #include "stdlib.h"
-#include <unistd.h>
+//#include <unistd.h>
 //#include <fcntl.h>
 #include <sys/types.h>
 //#include <sys/uio.h>
@@ -28,11 +28,12 @@ int main (int argc, char * argv[], char ** envp) {
   byte checksum; 
   byte complement;
   byte header[10];
+  //int fd = open( STDIN, O_RDWR )
 
   /* the following is the prototype for the read system call */
   /* int read(int fildes, void *buf, size_t nbyte);  */
-  //int read(int fildes, void *buf, size_t nbyte);
-  retval = read(STDIN_FILENO, (void *) &header, 10); 
+  int read(int fildes, void *buf, size_t nbyte);
+  //retval = read(STDIN_FILENO, &header, 10); 
   while (count > 0) {  
     if (count == 5) {
       checksum = header[count];
