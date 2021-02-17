@@ -27,25 +27,25 @@ int main (int argc, char * argv[], char ** envp) {
   int quotient, remainder; //retval;
   byte checksum; 
   byte complement;
-  byte buffer[10];
+  byte header[10];
   //int fd = open( STDIN, O_RDWR )
 
   /* the following is the prototype for the read system call */
   /* int read(int fildes, void *buf, size_t nbyte);  */
-  read(STDIN_FILENO, &buffer, 10);
+  read(STDIN_FILENO, &header, 10);
 
   for (int i = 0; i < count; i++) {
-    printf("%d\n", buffer[i]);
-    
+    printf("%d ", header[i]);
+    print("\n");
   } 
 
   while (count > 0) {  
     if (count == 5) {
-      checksum = buffer[count];
+      checksum = header[count];
     }else{
-      sum += buffer[count];
+      sum = sum + header[count];
     }
-    count--;
+    count = count -1;
   }
   quotient = sum / (max_int + 1);
   remainder = sum % (max_int + 1);
