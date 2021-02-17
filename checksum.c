@@ -32,7 +32,7 @@ int main (int argc, char * argv[], char ** envp) {
 
   /* the following is the prototype for the read system call */
   /* int read(int fildes, void *buf, size_t nbyte);  */
-  //retval = read(STDIN_FILENO, &header, 10);
+  read(STDIN_FILENO, &buffer, 10);
 
   for (int i = 0; i < count; i++) {
     printf("%d \n", buffer[i]);
