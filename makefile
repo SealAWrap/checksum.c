@@ -7,16 +7,19 @@ test: checksum create_input
 	./checksum < 156.bytes
 	./checksum < 229.bytes
 	./checksum < 81.bytes
+	./checksum16bits < 47201.bytes
 
 create_input: ints2bytes
 	./ints2bytes < 156.txt > 156.bytes
 	./ints2bytes < 229.txt > 229.bytes
 	./ints2bytes < 81.txt > 81.bytes
+	./ints2bytes < 47201.txt > 47201.bytes
 
 display_input:
 	od -t u1 156.bytes
 	od -t u1 229.bytes
 	od -t u1 81.bytes
+	od -t u1 47201.bytes
 
 ints2bytes: ints2bytes.c
 
