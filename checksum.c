@@ -41,13 +41,13 @@ int main (int argc, char * argv[], char ** envp) {
   printf("\n");
 
   for (int i = 0; i < count; i++) {  
-    if (count == 5) {
+    if (i == 5) {
       checksum = header[i];
       printf("Checksum has passed\n");
-      header[i] = 0;
-    }
+    }else{
       sum = sum + header[i];
       printf("%d\n", sum);
+    }
   }
   quotient = sum / (max_int + 1);
   remainder = sum % (max_int + 1);
