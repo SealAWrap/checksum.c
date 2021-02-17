@@ -10,7 +10,7 @@
 
 #include "stdio.h"
 #include "stdlib.h"
-//#include <unistd.h>
+#include <unistd.h>
 //#include <fcntl.h>
 #include <sys/types.h>
 //#include <sys/uio.h>
@@ -24,7 +24,7 @@ int main (int argc, char * argv[], char ** envp) {
 
   int count = 10;
   int sum = 0;   
-  int quotient, remainder, retval;
+  int quotient, remainder; //retval;
   byte checksum; 
   byte complement;
   byte header[10];
@@ -32,8 +32,13 @@ int main (int argc, char * argv[], char ** envp) {
 
   /* the following is the prototype for the read system call */
   /* int read(int fildes, void *buf, size_t nbyte);  */
-  int read(int fildes, void *buf, size_t nbyte);
-  //retval = read(STDIN_FILENO, &header, 10); 
+  //retval = read(STDIN_FILENO, &header, 10);
+
+  for (int i = 0; i < count; i++) {
+    printf("&d \n", header[i]);
+    
+  } 
+
   while (count > 0) {  
     if (count == 5) {
       checksum = header[count];
