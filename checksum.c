@@ -38,7 +38,7 @@ int main (int argc, char * argv[], char ** envp) {
     printf("%d ", header[i]);
     printf("\n");
   } 
-  Printf("\n");
+  printf("\n");
 
   while (count > 0) {  
     if (count == 5) {
