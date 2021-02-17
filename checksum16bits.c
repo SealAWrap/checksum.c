@@ -1,10 +1,10 @@
 /********************************/
-/* Program Name:Checksum        */
+/* Program Name:Checksum 16-bits*/
 /* Author: Jeovany J. Guillen   */
 /* Date: Feb. 9, 2021           */
 /********************************/
 /* Description:                 */
-/* Validation Checks: make sure the input number don't go out of bound of 255           */
+/* Validation Checks: needs to make sure the input numbers don't go out of bound 65535*/
 /* Enhancements:                */
 /********************************/
 
@@ -17,7 +17,7 @@
 //#include <unistd.h>
 
 
-#define max_int (255)
+#define max_int (65535)
 #define byte unsigned char
 
 int main (int argc, char * argv[], char ** envp) {
