@@ -111,9 +111,9 @@ $ make                                       # Use the make command to build all
 * Test your program:
 ```
 $ script checksum.typescript 
-$ cat 156.txt | int2byte | checksum
-$ cat 229.txt | int2byte | checksum
-$ cat 81.txt  | int2byte | checksum
+$ cat 156.txt | ints2byte | checksum
+$ cat 229.txt | ints2byte | checksum
+$ cat 81.txt  | ints2byte | checksum
 $ exit
 ```
 
