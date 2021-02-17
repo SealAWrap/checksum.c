@@ -1,0 +1,89 @@
+Script started on Tue 16 Feb 2021 08:44:06 PM PST
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ gdbexit[2Plsexit[2Plsexit[1Pgdb[Kgdbexit[2Plsexitssh jjg40858@ssh.csun.edupwd[Kssh jjg40858@ssh.csun.eduls[Kpwdscp sandbox.hostname jjg40858@ssh.csun.edu:sandbox.hostnamme[A]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm -r snadbox.hostnamels[Khostname > sandbox.hostnamenadbox.hostname[K > snadbox.hostnameandbox.hostnamels[Krm -r snadbox.hostnamels[Kscp sandbox.hostname jjg40858@ssh.csun.edu:sandbox.hostnamme[A]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ pwd[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Plsssh jjg40858@ssh.csun.edupwd[Kssh jjg40858@ssh.csun.eduexit[K[2Plsexit[1Pgdb[Kcat 156.txt | ints2bytes | checksum
+45 
+2 
+16 
+5 
+12 
+156 
+55 
+17 
+192 
+10 
+
+45
+47
+63
+68
+80
+Checksum has passed
+135
+152
+344
+354
+Printed quotient 1
+Printed remainder 98
+sum 99
+
+Stored Checksum: 156, Computed Checksum: 156
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ cat 156.txt | ints2bytes | checksumgdb[Kcat 156.txt | ints2bytes | checksum[1P[1P[1P[1@2[1@2[1@9
+45 
+2 
+16 
+5 
+12 
+229 
+55 
+17 
+192 
+34 
+
+45
+47
+63
+68
+80
+Checksum has passed
+135
+152
+344
+378
+Printed quotient 1
+Printed remainder 122
+sum 123
+
+Stored Checksum: 229, Computed Checksum: 132
+Error Detected!
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ cat 229.txt | ints2bytes | checksum156[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgdb[Kcat 156.txt | ints2bytes | checksum229[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1@8[1@1
+145 
+24 
+16 
+54 
+1 
+81 
+225 
+174 
+12 
+33 
+
+145
+169
+185
+239
+240
+Checksum has passed
+465
+639
+651
+684
+Printed quotient 2
+Printed remainder 172
+sum 174
+
+Stored Checksum: 81, Computed Checksum: 81
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ exit
+exit
+
+Script done on Tue 16 Feb 2021 08:45:11 PM PST
