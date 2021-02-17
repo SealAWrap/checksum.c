@@ -35,7 +35,7 @@ int main (int argc, char * argv[], char ** envp) {
   read(STDIN_FILENO, &buffer, 10);
 
   for (int i = 0; i < count; i++) {
-    printf("%d \n", buffer[i]);
+    printf("%d\n", buffer[i]);
     
   } 
 
