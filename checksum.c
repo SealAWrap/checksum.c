@@ -53,7 +53,7 @@ int main (int argc, char * argv[], char ** envp) {
   quotient = sum / (max_int + 1);
   remainder = sum % (max_int + 1);
   printf("Printed quotient %d", quotient);
-  printf("Printed quotient %d", quotient);
+  printf("Printed remainder %d", remainder);
   sum = quotient + remainder;
   printf("sum %d\n", sum);
   complement = max_int - sum;
