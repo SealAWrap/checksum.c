@@ -44,10 +44,10 @@ int main (int argc, char * argv[], char ** envp) {
     if (count == 5) {
       checksum = header[i];
       printf("Checksum has passed\n");
-    }else{
+      header[i] = 0;
+    }
       sum = sum + header[i];
       printf("%d\n", sum);
-    }
   }
   quotient = sum / (max_int + 1);
   remainder = sum % (max_int + 1);
