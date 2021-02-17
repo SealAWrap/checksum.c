@@ -35,7 +35,7 @@ int main (int argc, char * argv[], char ** envp) {
   //retval = read(STDIN_FILENO, &header, 10);
 
   for (int i = 0; i < count; i++) {
-    printf("&d \n", header[i]);
+    printf("%d \n", header[i]);
     
   } 
 
