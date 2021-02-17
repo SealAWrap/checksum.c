@@ -27,7 +27,7 @@ int main (int argc, char * argv[], char ** envp) {
   int quotient, remainder; //retval;
   byte checksum; 
   byte complement;
-  byte header[10];
+  byte buffer[10];
   //int fd = open( STDIN, O_RDWR )
 
   /* the following is the prototype for the read system call */
@@ -35,15 +35,15 @@ int main (int argc, char * argv[], char ** envp) {
   //retval = read(STDIN_FILENO, &header, 10);
 
   for (int i = 0; i < count; i++) {
-    printf("%d \n", header[i]);
+    printf("%d \n", buffer[i]);
     
   } 
 
   while (count > 0) {  
     if (count == 5) {
-      checksum = header[count];
+      checksum = buffer[count];
     }else{
-      sum += header[count];
+      sum += buffer[count];
     }
     count--;
   }
