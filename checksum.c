@@ -41,7 +41,7 @@ int main (int argc, char * argv[], char ** envp) {
   printf("\n");
 
   for (int i = 0; i < count; i++) {  
-    if (count == 6) {
+    if (count == 5) {
       checksum = header[i];
       printf("Checksum has passed\n");
     }else{
