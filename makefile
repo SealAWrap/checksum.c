@@ -7,7 +7,7 @@ test: checksum create_input
 	./checksum < 156.bytes
 	./checksum < 229.bytes
 	./checksum < 81.bytes
-	./checksum16bits < 47201.bytes
+	./checksum< 47201.bytes
 
 create_input: ints2bytes
 	./ints2bytes < 156.txt > 156.bytes
