@@ -1,14 +1,13 @@
 CCFLAGS=-g -DMAIN
 SOURCE=ints2bytes.c checksum.c
 
-all: ints2bytes checksum
-all: ints2bytes checksum16bits
+all: ints2bytes checksum; ints2bytes checksum16bits
 
 test: checksum create_input
 	./checksum < 156.bytes
 	./checksum < 229.bytes
 	./checksum < 81.bytes
-	./checksum < 47201.bytes	
+	./checksum16bits < 47201.bytes	
 	
 
 create_input: ints2bytes
@@ -44,13 +43,6 @@ checksum.mips: checksum.o
 	echo "enter the file checksum.c"
 	touch checksum.mips
 
-clean:
-	rm -f ints2bytes *.bytes
-	rm -f checksum checksum.o checksum.i checksum.s checksum.x86
-	rm -f checksum16bits checksum16bits.o checksum16bits.i checksum16bits.s checksum16bits.x86
-	rm -f *~ \#*
-
-
 checksum16bits: checksum16bits.o
 
 checksum16bits.o: checksum16bits.c 
@@ -70,7 +62,9 @@ checksum16bits.mips: checksum16bits.o
 	echo "enter the file checksum16bits.c"
 	touch checksum16bits.mips
 
-
-
-
+clean:
+	rm -f ints2bytes *.bytes
+	rm -f checksum checksum.o checksum.i checksum.s checksum.x86
+	rm -f checksum16bits checksum16bits.o checksum16bits.i checksum16bits.s checksum16bits.x86
+	rm -f *~ \#*
 
