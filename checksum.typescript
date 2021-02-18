@@ -1,0 +1,12 @@
+Script started on Thu 18 Feb 2021 12:25:25 PM PST
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ exitcat 81.txt | ints2bytes | checksum[1@229[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C156[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Stored Checksum: 156, Computed Checksum: 156
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ cat 156.txt | ints2bytes | checksumexit[Kcat 81.txt | ints2bytes | checksum[1@229[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Stored Checksum: 229, Computed Checksum: 132
+Error Detected!
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ cat 229.txt | ints2bytes | checksum156[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kcat 81.txt | ints2bytes | checksum
+Stored Checksum: 81, Computed Checksum: 81
+]0;jjg40858@ssh: ~/comp122/checksum.c[01;32mjjg40858@ssh[00m:[01;34m~/comp122/checksum.c[00m$ exit
+exit
+
+Script done on Thu 18 Feb 2021 12:25:45 PM PST
