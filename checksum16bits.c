@@ -11,8 +11,8 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include <unistd.h>
-//#include <fcntl.h>
 #include <sys/types.h>
+//#include <fcntl.h>
 //#include <sys/uio.h>
 //#include <unistd.h>
 
@@ -23,8 +23,7 @@
 int main (int argc, char * argv[], char ** envp) {
 
   int count = 10;
-  int sum = 0;   
-  int quotient, remainder; //retval;
+  int sum = 0;
   byte checksum; 
   byte complement;
   byte header[10];
@@ -34,27 +33,27 @@ int main (int argc, char * argv[], char ** envp) {
   /* int read(int fildes, void *buf, size_t nbyte);  */
   read(STDIN_FILENO, &header, 10);
 
-  for (int i = 0; i < count; i++) {
-    printf("%d ", header[i]);
-    printf("\n");
-  } 
-  printf("\n");
+  // for (int i = 0; i < count; i++) {
+  //   printf("%d ", header[i]);
+  //   printf("\n");
+  // } 
+  // printf("\n");
 
+  /* Loop through checksum using complements */
   for (int i = 0; i < count; i++) {  
     if (i == 5) {
       checksum = header[i];
-      printf("Checksum has passed\n");
-    }else{
-      sum = sum + header[i];
-      printf("%d\n", sum);
+      header[i] = 0;
+      //printf("Checksum has passed\n");
     }
-  }
-  quotient = sum / (max_int + 1);
-  remainder = sum % (max_int + 1);
-  printf("Printed quotient %d\n", quotient);
-  printf("Printed remainder %d\n", remainder);
-  sum = quotient + remainder;
-  printf("sum %d\n\n", sum);
+
+    sum = sum + header[i];
+
+    if (sum >= (max_int +1)) {
+      sum = (sum % (max_int +1)) + 1;
+    }
+  }//end of for loop
+  
   complement = max_int - sum;
   
 

@@ -2,12 +2,15 @@ CCFLAGS=-g -DMAIN
 SOURCE=ints2bytes.c checksum.c
 
 all: ints2bytes checksum
+all: ints2bytes checksum16bits
 
 test: checksum create_input
 	./checksum < 156.bytes
 	./checksum < 229.bytes
 	./checksum < 81.bytes
-	./checksum< 47201.bytes
+
+test: checksum16bits create_input	
+	./checksum16bits < 47201.bytes
 
 create_input: ints2bytes
 	./ints2bytes < 156.txt > 156.bytes
@@ -45,6 +48,31 @@ checksum.mips: checksum.o
 clean:
 	rm -f ints2bytes *.bytes
 	rm -f checksum checksum.o checksum.i checksum.s checksum.x86
+	rm -f *~ \#*
+
+
+checksum16bits: checksum16bits.o
+
+checksum16bits.o: checksum16bits.c 
+	$(CC) -o checksum16bits.o -c $(CCFLAGS) checksum16bits.c
+
+checksum16bits.i: checksum16bits.c 
+	$(CC) -o checksum16bits.i -E checksum16bits.c
+
+checksum16bits.s: checksum16bits.c 
+	$(CC) -o checksum16bits.s -S checksum16bits.c
+
+checksum16bits.x86: tube.s
+	ln -s checksum16bits.x86 checksum16bits.s checksum16bits.x86
+
+checksum.mips: checksum.o
+	echo "Go to the website: http://reliant.colab.duke.edu/c2mips/"
+	echo "enter the file checksum16bits.c"
+	touch checksum.mips
+
+clean:
+	rm -f ints2bytes *.bytes
+	rm -f checksum16bits checksum16bits.o checksum16bits.i checksum16bits.s checksum16bits.x86
 	rm -f *~ \#*
 
 
