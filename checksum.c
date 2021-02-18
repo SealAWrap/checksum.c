@@ -24,7 +24,6 @@ int main (int argc, char * argv[], char ** envp) {
 
   int count = 10;
   int sum = 0;   
-  int quotient, remainder; //retval;
   byte checksum; 
   byte complement;
   byte header[10];
@@ -43,17 +42,15 @@ int main (int argc, char * argv[], char ** envp) {
   for (int i = 0; i < count; i++) {  
     if (i == 5) {
       checksum = header[i];
+      header[i] = 0;
       printf("Checksum has passed\n");
-    }else{
-      sum = sum + header[i];
-      printf("%d\n", sum);
+    }
+    sum = sum + header[i];
+    printf("%d\n", sum);
+    if (sum >= (max_int +1)) {
+      sum = (sum % (max_int +1)) + 1;
     }
   }
-  quotient = sum / (max_int + 1);
-  remainder = sum % (max_int + 1);
-  printf("Printed quotient %d\n", quotient);
-  printf("Printed remainder %d\n", remainder);
-  sum = quotient + remainder;
   printf("sum %d\n\n", sum);
   complement = max_int - sum;
   
