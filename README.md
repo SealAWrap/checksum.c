@@ -59,7 +59,7 @@ Your C program should conform to the following specification:
 #include "stdlib.h"
 
 #define max_int (255)
-#define byte (char)
+#define byte unsigned char
 
 int main (int argc, char * argv[], char ** envp) {
 
@@ -111,9 +111,9 @@ $ make                                       # Use the make command to build all
 * Test your program:
 ```
 $ script checksum.typescript 
-$ cat 156.txt | ints2byte | checksum
-$ cat 229.txt | ints2byte | checksum
-$ cat 81.txt  | ints2byte | checksum
+$ cat 156.txt | ints2bytes | checksum
+$ cat 229.txt | ints2bytes | checksum
+$ cat 81.txt  | ints2bytes | checksum
 $ exit
 ```
 
