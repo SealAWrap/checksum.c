@@ -65,7 +65,7 @@ checksum16bits.s: checksum16bits.c
 checksum16bits.x86: tube.s
 	ln -s checksum16bits.x86 checksum16bits.s checksum16bits.x86
 
-checksum.mips: checksum16bits.o
+checksum16bits.mips: checksum16bits.o
 	echo "Go to the website: http://reliant.colab.duke.edu/c2mips/"
 	echo "enter the file checksum16bits.c"
 	touch checksum16bits.mips
